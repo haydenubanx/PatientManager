@@ -1,17 +1,4 @@
-//Patients -- brief statement as to the file’s purpose
-//CSIS 112-B01 
-
-
-//Note: 
-// I had a lot of fun with this programming assignment and it was so cool to work with an assignment that
-//was easy to see the real world application of. Becasue I got really into this project, I also added a few
-//functions beyond what was required by the assignment to add/ remove patients and their cholesterol 
-//readings after they had already been created. 
-//
-//To make it easy for you to grade what was required by the assignment, I have moved those functions to the 
-// bottom of the class implementation files below the constructors.
-//
-//Thanks for the assignment, I really enjoyed this one!!!
+//Patients
 
 //Include statements 
 #include <iostream> 
@@ -20,7 +7,6 @@
 #include <vector>
 #include "Doctor.h"
 using namespace std;
-
 
 
 //Function prototypes
@@ -34,10 +20,6 @@ void removeCholesterolInstruction(doctor& newDoc);
 
 int main()
 {
-	//Print Statement for name and lab number
-	cout << "Hayden Eubanks -- Programming Assignment 4" << endl << endl;
-
-	//Variable declarations 
 
 	//string to temporarily store the doctors name to be passed into the doctors class
 	string tempDoctorName;
@@ -45,7 +27,6 @@ int main()
 	//string to store the instruction entered by the user for which menu function to perform
 	char enteredInstruction;
 
-	//Program logic
 
 	//Gets the doctors name to pass through to the constructor
 	cout << "Please Enter Name of Doctor\n\n";
@@ -164,12 +145,12 @@ int main()
 
 
 	//Closing program statements 
-	system("pause");
+    std::cout << "Press Enter to continue..." << std::endl;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.get();
 	return 0;
 }
 
-
-//Function definitions
 
 //Function to print instructions for use
 void displayInstructions()
